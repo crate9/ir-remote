@@ -11,17 +11,17 @@
 		<key>Panasonic</key>
 		<dict>
 			<key>power</key>
-			<string>sendir,1:1,1,36443,1,1,22,3644\x0D</string>
+			<string>sendir,1:1,1,36443,1,1,22,3644</string>
 			<key>vol_up</key>
-			<string>sendir,1:1,1,36443,1,1,11,21,7,25,5,27,4,28,3,29,2,30,2,30,2,62,14,18,7,57,12,3644\x0D</string>
+			<string>sendir,1:1,1,36443,1,1,11,21,7,25,5,27,4,28,3,29,2,30,2,30,2,62,14,18,7,57,12,3644</string>
 			<key>vol_down</key>
-			<string>sendir,1:1,1,36656,1,1,20,16,16,16,16,48,16,16,16,16,16,48,16,16,16,16,16,16,16,16,16,48,16,16,16,48,16,3665\x0D</string>
+			<string>sendir,1:1,1,36656,1,1,20,16,16,16,16,48,16,16,16,16,16,48,16,16,16,16,16,16,16,16,16,48,16,16,16,48,16,3665</string>
 			<key>chan_up</key>
-			<string>sendir,1:1,1,36656,1,1,15,48,16,48,16,16,16,48,16,3665\x0D</string>
+			<string>sendir,1:1,1,36656,1,1,15,48,16,48,16,16,16,48,16,3665</string>
 			<key>chan_down</key>
-			<string>sendir,1:1,1,36656,1,1,15,3665\x0D</string>
+			<string>sendir,1:1,1,36656,1,1,15,3665</string>
 			<key>input</key>
-			<string>sendir,1:1,1,36549,1,1,15,3654\x0D</string>
+			<string>sendir,1:1,1,36549,1,1,15,3654</string>
 		</dict>
 	</dict>
 </dict>

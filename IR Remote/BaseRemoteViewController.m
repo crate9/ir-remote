@@ -119,7 +119,8 @@
             break;
     }
     
-    NSLog(@"%@", command);
+    command = [NSString stringWithFormat:@"%@\r", command];
+    
     
     const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
     [api writeToServer:str];
