@@ -22,6 +22,7 @@
 #define kBaseUILabelFont [StyleConsts getFontWithSize:18]
 #define kFontName @"Helvetica"
 #define kBoldFontName @"Helvetica-Bold"
+#define kBackgroundColor [UIColor colorWithRed:51.0f/255.0f green:54.0f/255.0f blue:56.0f/255.0f alpha:1.0f]
 
 //UIButton
 #define kUIButtonFont [StyleConsts getFontWithSize:22]
