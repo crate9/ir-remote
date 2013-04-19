@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>defaults</key>
+	<dict>
+		<key>itac_port</key>
+		<string>4998</string>
+		<key>itach_ip</key>
+		<string>192.168.1.34</string>
+		<key>Panasonic</key>
+		<dict>
+			<key>power</key>
+			<string>sendir,1:1,1,36443,1,1,22,3644\x0D</string>
+			<key>vol_up</key>
+			<string>sendir,1:1,1,36443,1,1,11,21,7,25,5,27,4,28,3,29,2,30,2,30,2,62,14,18,7,57,12,3644\x0D</string>
+			<key>vol_down</key>
+			<string>sendir,1:1,1,36656,1,1,20,16,16,16,16,48,16,16,16,16,16,48,16,16,16,16,16,16,16,16,16,48,16,16,16,48,16,3665\x0D</string>
+			<key>chan_up</key>
+			<string>sendir,1:1,1,36656,1,1,15,48,16,48,16,16,16,48,16,3665\x0D</string>
+			<key>chan_down</key>
+			<string>sendir,1:1,1,36656,1,1,15,3665\x0D</string>
+			<key>input</key>
+			<string>sendir,1:1,1,36549,1,1,15,3654\x0D</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
