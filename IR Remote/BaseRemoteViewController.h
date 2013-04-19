@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APIHelper.h"
 
 @interface BaseRemoteViewController : UIViewController
+
+@property (strong, nonatomic) APIHelper *api;
+
+-(IBAction)sendCommand:(id)sender;
 
 @end
