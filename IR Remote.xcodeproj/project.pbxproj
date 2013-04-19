@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		070B45AA17206B4A00B9D12E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45A917206B4A00B9D12E /* UIKit.framework */; };
+		070B45AC17206B4A00B9D12E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45AB17206B4A00B9D12E /* Foundation.framework */; };
+		070B45AE17206B4A00B9D12E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45AD17206B4A00B9D12E /* CoreGraphics.framework */; };
+		070B45B417206B4A00B9D12E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 070B45B217206B4A00B9D12E /* InfoPlist.strings */; };
+		070B45B617206B4A00B9D12E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B45B517206B4A00B9D12E /* main.m */; };
+		070B45BA17206B4B00B9D12E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B45B917206B4B00B9D12E /* AppDelegate.m */; };
+		070B45BC17206B4B00B9D12E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 070B45BB17206B4B00B9D12E /* Default.png */; };
+		070B45BE17206B4B00B9D12E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 070B45BD17206B4B00B9D12E /* Default@2x.png */; };
+		070B45C017206B4B00B9D12E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 070B45BF17206B4B00B9D12E /* Default-568h@2x.png */; };
+		070B45C817206B4B00B9D12E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45C717206B4B00B9D12E /* SenTestingKit.framework */; };
+		070B45C917206B4B00B9D12E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45A917206B4A00B9D12E /* UIKit.framework */; };
+		070B45CA17206B4B00B9D12E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45AB17206B4A00B9D12E /* Foundation.framework */; };
+		070B45D217206B4B00B9D12E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 070B45D017206B4B00B9D12E /* InfoPlist.strings */; };
+		070B45D517206B4B00B9D12E /* IR_RemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B45D417206B4B00B9D12E /* IR_RemoteTests.m */; };
+		070B45E117206BDA00B9D12E /* SlidingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B45E017206BDA00B9D12E /* SlidingMenuViewController.m */; };
+		07A7105B17206D940059213F /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105817206D940059213F /* MFSideMenu.m */; };
+		07A7105C17206D940059213F /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105A17206D940059213F /* UINavigationController+MFSideMenu.m */; };
+		07A7105F17206DFB0059213F /* StyleConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105E17206DFB0059213F /* StyleConsts.m */; };
+		07A7107117206E920059213F /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106217206E920059213F /* DDAbstractDatabaseLogger.m */; };
+		07A7107217206E920059213F /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106417206E920059213F /* DDASLLogger.m */; };
+		07A7107317206E920059213F /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106617206E920059213F /* DDFileLogger.m */; };
+		07A7107417206E920059213F /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106817206E920059213F /* DDLog.m */; };
+		07A7107517206E920059213F /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106A17206E920059213F /* DDTTYLogger.m */; };
+		07A7107617206E920059213F /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106D17206E920059213F /* ContextFilterLogFormatter.m */; };
+		07A7107717206E920059213F /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7106F17206E920059213F /* DispatchQueueLogFormatter.m */; };
+		07A7107817206E920059213F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07A7107017206E920059213F /* README.txt */; };
+		07A7107B17206EB60059213F /* NSUserDefaults+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7107A17206EB60059213F /* NSUserDefaults+Helper.m */; };
+		07A7107F17206F2E0059213F /* BaseRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7107D17206F2E0059213F /* BaseRemoteViewController.m */; };
+		07A7108017206F2E0059213F /* BaseRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A7107E17206F2E0059213F /* BaseRemoteViewController.xib */; };
+		07A71083172070770059213F /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07A71082172070770059213F /* localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		070B45CB17206B4B00B9D12E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 070B459E17206B4A00B9D12E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 070B45A517206B4A00B9D12E;
+			remoteInfo = "IR Remote";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		070B45A617206B4A00B9D12E /* IR Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IR Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B45A917206B4A00B9D12E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		070B45AB17206B4A00B9D12E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		070B45AD17206B4A00B9D12E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		070B45B117206B4A00B9D12E /* IR Remote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IR Remote-Info.plist"; sourceTree = "<group>"; };
+		070B45B317206B4A00B9D12E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		070B45B517206B4A00B9D12E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		070B45B717206B4A00B9D12E /* IR Remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IR Remote-Prefix.pch"; sourceTree = "<group>"; };
+		070B45B817206B4A00B9D12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		070B45B917206B4B00B9D12E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		070B45BB17206B4B00B9D12E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		070B45BD17206B4B00B9D12E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		070B45BF17206B4B00B9D12E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		070B45C617206B4B00B9D12E /* IR RemoteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IR RemoteTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B45C717206B4B00B9D12E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		070B45CF17206B4B00B9D12E /* IR RemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IR RemoteTests-Info.plist"; sourceTree = "<group>"; };
+		070B45D117206B4B00B9D12E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		070B45D317206B4B00B9D12E /* IR_RemoteTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IR_RemoteTests.h; sourceTree = "<group>"; };
+		070B45D417206B4B00B9D12E /* IR_RemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IR_RemoteTests.m; sourceTree = "<group>"; };
+		070B45DF17206BDA00B9D12E /* SlidingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingMenuViewController.h; sourceTree = "<group>"; };
+		070B45E017206BDA00B9D12E /* SlidingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingMenuViewController.m; sourceTree = "<group>"; };
+		07A7105717206D940059213F /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		07A7105817206D940059213F /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenu.m; sourceTree = "<group>"; };
+		07A7105917206D940059213F /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
+		07A7105A17206D940059213F /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
+		07A7105D17206DFB0059213F /* StyleConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleConsts.h; sourceTree = "<group>"; };
+		07A7105E17206DFB0059213F /* StyleConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleConsts.m; sourceTree = "<group>"; };
+		07A7106117206E920059213F /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		07A7106217206E920059213F /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		07A7106317206E920059213F /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		07A7106417206E920059213F /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		07A7106517206E920059213F /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		07A7106617206E920059213F /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		07A7106717206E920059213F /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		07A7106817206E920059213F /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		07A7106917206E920059213F /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		07A7106A17206E920059213F /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		07A7106C17206E920059213F /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		07A7106D17206E920059213F /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		07A7106E17206E920059213F /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		07A7106F17206E920059213F /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		07A7107017206E920059213F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		07A7107917206EB60059213F /* NSUserDefaults+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Helper.h"; sourceTree = "<group>"; };
+		07A7107A17206EB60059213F /* NSUserDefaults+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Helper.m"; sourceTree = "<group>"; };
+		07A7107C17206F2D0059213F /* BaseRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRemoteViewController.h; sourceTree = "<group>"; };
+		07A7107D17206F2E0059213F /* BaseRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRemoteViewController.m; sourceTree = "<group>"; };
+		07A7107E17206F2E0059213F /* BaseRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseRemoteViewController.xib; sourceTree = "<group>"; };
+		07A71082172070770059213F /* localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		070B45A317206B4A00B9D12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B45AA17206B4A00B9D12E /* UIKit.framework in Frameworks */,
+				070B45AC17206B4A00B9D12E /* Foundation.framework in Frameworks */,
+				070B45AE17206B4A00B9D12E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070B45C217206B4B00B9D12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B45C817206B4B00B9D12E /* SenTestingKit.framework in Frameworks */,
+				070B45C917206B4B00B9D12E /* UIKit.framework in Frameworks */,
+				070B45CA17206B4B00B9D12E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		070B459D17206B4A00B9D12E = {
+			isa = PBXGroup;
+			children = (
+				070B45AF17206B4A00B9D12E /* IR Remote */,
+				070B45CD17206B4B00B9D12E /* IR RemoteTests */,
+				070B45A817206B4A00B9D12E /* Frameworks */,
+				070B45A717206B4A00B9D12E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		070B45A717206B4A00B9D12E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				070B45A617206B4A00B9D12E /* IR Remote.app */,
+				070B45C617206B4B00B9D12E /* IR RemoteTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		070B45A817206B4A00B9D12E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				070B45A917206B4A00B9D12E /* UIKit.framework */,
+				070B45AB17206B4A00B9D12E /* Foundation.framework */,
+				070B45AD17206B4A00B9D12E /* CoreGraphics.framework */,
+				070B45C717206B4B00B9D12E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		070B45AF17206B4A00B9D12E /* IR Remote */ = {
+			isa = PBXGroup;
+			children = (
+				070B45B817206B4A00B9D12E /* AppDelegate.h */,
+				070B45B917206B4B00B9D12E /* AppDelegate.m */,
+				07A7107C17206F2D0059213F /* BaseRemoteViewController.h */,
+				07A7107D17206F2E0059213F /* BaseRemoteViewController.m */,
+				07A7107E17206F2E0059213F /* BaseRemoteViewController.xib */,
+				07A7107917206EB60059213F /* NSUserDefaults+Helper.h */,
+				07A7107A17206EB60059213F /* NSUserDefaults+Helper.m */,
+				070B45DF17206BDA00B9D12E /* SlidingMenuViewController.h */,
+				070B45E017206BDA00B9D12E /* SlidingMenuViewController.m */,
+				070B45B017206B4A00B9D12E /* Supporting Files */,
+			);
+			path = "IR Remote";
+			sourceTree = "<group>";
+		};
+		070B45B017206B4A00B9D12E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A71081172070400059213F /* Images */,
+				070B45DE17206BBA00B9D12E /* Extern Libs */,
+				070B45B217206B4A00B9D12E /* InfoPlist.strings */,
+				070B45B117206B4A00B9D12E /* IR Remote-Info.plist */,
+				070B45B717206B4A00B9D12E /* IR Remote-Prefix.pch */,
+				070B45B517206B4A00B9D12E /* main.m */,
+				07A7105D17206DFB0059213F /* StyleConsts.h */,
+				07A7105E17206DFB0059213F /* StyleConsts.m */,
+				07A71082172070770059213F /* localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		070B45CD17206B4B00B9D12E /* IR RemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				070B45D317206B4B00B9D12E /* IR_RemoteTests.h */,
+				070B45D417206B4B00B9D12E /* IR_RemoteTests.m */,
+				070B45CE17206B4B00B9D12E /* Supporting Files */,
+			);
+			path = "IR RemoteTests";
+			sourceTree = "<group>";
+		};
+		070B45CE17206B4B00B9D12E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				070B45CF17206B4B00B9D12E /* IR RemoteTests-Info.plist */,
+				070B45D017206B4B00B9D12E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		070B45DE17206BBA00B9D12E /* Extern Libs */ = {
+			isa = PBXGroup;
+			children = (
+				07A7106017206E920059213F /* Lumberjack */,
+				07A7105617206D940059213F /* MFSideMenu */,
+			);
+			name = "Extern Libs";
+			sourceTree = "<group>";
+		};
+		07A7105617206D940059213F /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				07A7105717206D940059213F /* MFSideMenu.h */,
+				07A7105817206D940059213F /* MFSideMenu.m */,
+				07A7105917206D940059213F /* UINavigationController+MFSideMenu.h */,
+				07A7105A17206D940059213F /* UINavigationController+MFSideMenu.m */,
+			);
+			name = MFSideMenu;
+			path = extern/MFSideMenu;
+			sourceTree = "<group>";
+		};
+		07A7106017206E920059213F /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				07A7106117206E920059213F /* DDAbstractDatabaseLogger.h */,
+				07A7106217206E920059213F /* DDAbstractDatabaseLogger.m */,
+				07A7106317206E920059213F /* DDASLLogger.h */,
+				07A7106417206E920059213F /* DDASLLogger.m */,
+				07A7106517206E920059213F /* DDFileLogger.h */,
+				07A7106617206E920059213F /* DDFileLogger.m */,
+				07A7106717206E920059213F /* DDLog.h */,
+				07A7106817206E920059213F /* DDLog.m */,
+				07A7106917206E920059213F /* DDTTYLogger.h */,
+				07A7106A17206E920059213F /* DDTTYLogger.m */,
+				07A7106B17206E920059213F /* Extensions */,
+			);
+			name = Lumberjack;
+			path = extern/Lumberjack;
+			sourceTree = "<group>";
+		};
+		07A7106B17206E920059213F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07A7106C17206E920059213F /* ContextFilterLogFormatter.h */,
+				07A7106D17206E920059213F /* ContextFilterLogFormatter.m */,
+				07A7106E17206E920059213F /* DispatchQueueLogFormatter.h */,
+				07A7106F17206E920059213F /* DispatchQueueLogFormatter.m */,
+				07A7107017206E920059213F /* README.txt */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07A71081172070400059213F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				070B45BF17206B4B00B9D12E /* Default-568h@2x.png */,
+				070B45BB17206B4B00B9D12E /* Default.png */,
+				070B45BD17206B4B00B9D12E /* Default@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		070B45A517206B4A00B9D12E /* IR Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070B45D817206B4B00B9D12E /* Build configuration list for PBXNativeTarget "IR Remote" */;
+			buildPhases = (
+				070B45A217206B4A00B9D12E /* Sources */,
+				070B45A317206B4A00B9D12E /* Frameworks */,
+				070B45A417206B4A00B9D12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IR Remote";
+			productName = "IR Remote";
+			productReference = 070B45A617206B4A00B9D12E /* IR Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		070B45C517206B4B00B9D12E /* IR RemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070B45DB17206B4B00B9D12E /* Build configuration list for PBXNativeTarget "IR RemoteTests" */;
+			buildPhases = (
+				070B45C117206B4B00B9D12E /* Sources */,
+				070B45C217206B4B00B9D12E /* Frameworks */,
+				070B45C317206B4B00B9D12E /* Resources */,
+				070B45C417206B4B00B9D12E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				070B45CC17206B4B00B9D12E /* PBXTargetDependency */,
+			);
+			name = "IR RemoteTests";
+			productName = "IR RemoteTests";
+			productReference = 070B45C617206B4B00B9D12E /* IR RemoteTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		070B459E17206B4A00B9D12E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Eric Williamson";
+			};
+			buildConfigurationList = 070B45A117206B4A00B9D12E /* Build configuration list for PBXProject "IR Remote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 070B459D17206B4A00B9D12E;
+			productRefGroup = 070B45A717206B4A00B9D12E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				070B45A517206B4A00B9D12E /* IR Remote */,
+				070B45C517206B4B00B9D12E /* IR RemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		070B45A417206B4A00B9D12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B45B417206B4A00B9D12E /* InfoPlist.strings in Resources */,
+				070B45BC17206B4B00B9D12E /* Default.png in Resources */,
+				070B45BE17206B4B00B9D12E /* Default@2x.png in Resources */,
+				070B45C017206B4B00B9D12E /* Default-568h@2x.png in Resources */,
+				07A7107817206E920059213F /* README.txt in Resources */,
+				07A7108017206F2E0059213F /* BaseRemoteViewController.xib in Resources */,
+				07A71083172070770059213F /* localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070B45C317206B4B00B9D12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B45D217206B4B00B9D12E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		070B45C417206B4B00B9D12E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		070B45A217206B4A00B9D12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B45B617206B4A00B9D12E /* main.m in Sources */,
+				070B45BA17206B4B00B9D12E /* AppDelegate.m in Sources */,
+				070B45E117206BDA00B9D12E /* SlidingMenuViewController.m in Sources */,
+				07A7105B17206D940059213F /* MFSideMenu.m in Sources */,
+				07A7105C17206D940059213F /* UINavigationController+MFSideMenu.m in Sources */,
+				07A7105F17206DFB0059213F /* StyleConsts.m in Sources */,
+				07A7107117206E920059213F /* DDAbstractDatabaseLogger.m in Sources */,
+				07A7107217206E920059213F /* DDASLLogger.m in Sources */,
+				07A7107317206E920059213F /* DDFileLogger.m in Sources */,
+				07A7107417206E920059213F /* DDLog.m in Sources */,
+				07A7107517206E920059213F /* DDTTYLogger.m in Sources */,
+				07A7107617206E920059213F /* ContextFilterLogFormatter.m in Sources */,
+				07A7107717206E920059213F /* DispatchQueueLogFormatter.m in Sources */,
+				07A7107B17206EB60059213F /* NSUserDefaults+Helper.m in Sources */,
+				07A7107F17206F2E0059213F /* BaseRemoteViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		070B45C117206B4B00B9D12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B45D517206B4B00B9D12E /* IR_RemoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		070B45CC17206B4B00B9D12E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 070B45A517206B4A00B9D12E /* IR Remote */;
+			targetProxy = 070B45CB17206B4B00B9D12E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		070B45B217206B4A00B9D12E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				070B45B317206B4A00B9D12E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		070B45D017206B4B00B9D12E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				070B45D117206B4B00B9D12E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		070B45D617206B4B00B9D12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		070B45D717206B4B00B9D12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		070B45D917206B4B00B9D12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IR Remote/IR Remote-Prefix.pch";
+				INFOPLIST_FILE = "IR Remote/IR Remote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		070B45DA17206B4B00B9D12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IR Remote/IR Remote-Prefix.pch";
+				INFOPLIST_FILE = "IR Remote/IR Remote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		070B45DC17206B4B00B9D12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IR Remote.app/IR Remote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IR Remote/IR Remote-Prefix.pch";
+				INFOPLIST_FILE = "IR RemoteTests/IR RemoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		070B45DD17206B4B00B9D12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IR Remote.app/IR Remote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IR Remote/IR Remote-Prefix.pch";
+				INFOPLIST_FILE = "IR RemoteTests/IR RemoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		070B45A117206B4A00B9D12E /* Build configuration list for PBXProject "IR Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070B45D617206B4B00B9D12E /* Debug */,
+				070B45D717206B4B00B9D12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		070B45D817206B4B00B9D12E /* Build configuration list for PBXNativeTarget "IR Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070B45D917206B4B00B9D12E /* Debug */,
+				070B45DA17206B4B00B9D12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		070B45DB17206B4B00B9D12E /* Build configuration list for PBXNativeTarget "IR RemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070B45DC17206B4B00B9D12E /* Debug */,
+				070B45DD17206B4B00B9D12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 070B459E17206B4A00B9D12E /* Project object */;
+}
