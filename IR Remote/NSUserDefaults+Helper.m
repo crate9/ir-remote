@@ -10,7 +10,7 @@
 
 
 NSString *const DefaultsKeyFirstStartup  = @"isFirstStartup";
-
+NSString *const DefaultsKeyITachIP = @"itach_ip";
 
 @implementation NSUserDefaults (Helper)
 
@@ -26,6 +26,12 @@ NSString *const DefaultsKeyFirstStartup  = @"isFirstStartup";
     [self setBool:enabled forKey:DefaultsKeyFirstStartup];
 }
 
+- (void)setITachIP:(NSString *)ip {
+    [self setObject:ip forKey:DefaultsKeyITachIP];
+}
 
+- (NSString *)ip {
+    return [self objectForKey:DefaultsKeyITachIP];
+}
 
 @end

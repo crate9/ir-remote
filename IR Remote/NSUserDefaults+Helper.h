@@ -12,6 +12,6 @@
 
 
 @property (assign, getter=isFirstStartup, setter=setIsFirstStartup:) BOOL isFirstStartup;
-
+@property (assign, getter=ip, setter=setITachIP:) NSString *ip;
 
 @end
