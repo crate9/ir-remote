@@ -18,6 +18,20 @@ NSOutputStream *oStream;
 CFReadStreamRef readStream = NULL;
 CFWriteStreamRef writeStream = NULL;
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *url = [defaults stringForKey:@"itach_ip"];
+        [self connectToServerUsingCFStream:url portNo:4998];
+        
+        
+        
+    }
+    return self;
+}
+
 -(void) connectToServerUsingCFStream:(NSString *) urlStr portNo: (uint) portNo {
     
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,

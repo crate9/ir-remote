@@ -10,7 +10,9 @@
 
 @interface APIHelper : NSObject <NSStreamDelegate>
 
+
 -(void) connectToServerUsingCFStream:(NSString *) urlStr portNo: (uint) portNo;
 -(void) writeToServer:(const uint8_t *) buf;
+
 
 @end

@@ -29,6 +29,7 @@
 #define kUIButtonTextColor [UIColor blackColor]
 
 //Sliding menu
+#define kUISlidingMenuSectionHeaderHeight 44
 #define kUISlidingMenuHeaderFont [StyleConsts getBoldFontWithSize:22]
 #define kUISlidingMenuMainFont [StyleConsts getFontWithSize:20]
 #define kUISlidingMenuTextColor [UIColor whiteColor]
@@ -43,6 +44,13 @@
 #define kTableViewCellBackgroundColor [UIColor colorWithRed:239.0f/255.0f green:236.0f/255.0f blue:236.0f/255.0f alpha:1.0f]
 #define kTableViewBorderWidth 2
 #define kTableViewBorderColor [UIColor blackColor].CGColor
+
+//Remote
+#define kRemoteButtonHeight 44
+#define kRemoteButtonWidth 100
+#define kRemoteButtonHeightSpacing 64
+#define kRemoteButtonWidthSpacing 120
+#define kRemoteButtonEdgePadding 20
 
 
 @interface StyleConsts : NSObject

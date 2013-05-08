@@ -9,9 +9,11 @@
 #import "SlidingMenuViewController.h"
 
 #import "AppDelegate.h"
+#import "BaseMapViewController.h"
+#import "BaseRemoteViewController.h"
 #import "StyleConsts.h"
 
-#define kHeightForSectionHeader 44
+
 
 @implementation SlidingMenuViewController
 
@@ -24,9 +26,10 @@
         
         
         tableSectionTitles = [[NSMutableArray alloc] initWithObjects:
-                              @"REMOTES", nil];
+                              @"REMOTES", @"OFFLINE MAPS", nil];
         tableData = [[NSMutableArray alloc] initWithObjects:
-                     [[NSArray alloc] initWithObjects:@"Direct TV", @"Panasonic", @"Bedroom DVD", @"Main DVD", nil],
+                     [[NSArray alloc] initWithObjects:@"TV", @"Direct TV", @"DVD Player", @"Hot Keys", nil],
+                     [[NSArray alloc] initWithObjects:@"Alaska", @"Mexico", @"Costa Rica", nil],
                      nil];
         
     }
@@ -51,7 +54,7 @@
 #pragma mark - Table view data source
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return kHeightForSectionHeader;
+    return kUISlidingMenuSectionHeaderHeight;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -60,11 +63,11 @@
 
 -(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, kHeightForSectionHeader)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, kUISlidingMenuSectionHeaderHeight)];
 
     [headerView setBackgroundColor:[UIColor colorWithRed:39.0f/255.0f green:39.0f/255.0f blue:39.0f/255.0f alpha:1.0f]];
     // Add the label
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 2, tableView.bounds.size.width, kHeightForSectionHeader)];
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 2, tableView.bounds.size.width, kUISlidingMenuSectionHeaderHeight)];
     [headerLabel setBackgroundColor:[UIColor clearColor]];
     [headerLabel setFont:kUISlidingMenuHeaderFont];
     [headerLabel setTextColor:[UIColor whiteColor]];
@@ -133,7 +136,29 @@
     UIViewController *controller;
     
     switch(indexPath.section) {
-            default:
+        case 0:
+            controller = [[BaseRemoteViewController alloc] initWithNibName:@"BaseRemoteViewController" bundle:nil];
+            switch (indexPath.row) {
+                case 0:
+                    [controller setTitle:@"TV"];
+                    break;
+                case 1:
+                    [controller setTitle:@"Direct TV"];
+                    break;
+                case 2:
+                    [controller setTitle:@"DVD Player"];
+                    break;
+                case 3:
+                    [controller setTitle:@"Hot Keys"];
+                    break;
+                default:
+                    [controller setTitle:@"UNIMPLEMENTED"];
+            }
+            break;
+        case 1:
+            controller = [[BaseMapViewController alloc] init];
+            break;
+        default:
             break;
     }
     

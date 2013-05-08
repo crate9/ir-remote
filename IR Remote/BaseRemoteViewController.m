@@ -8,17 +8,15 @@
 
 #import "BaseRemoteViewController.h"
 
+#import <MapBox/MapBox.h>
+
 #import "APIHelper.h"
 #import "NSUserDefaults+Helper.h"
 #import "StyleConsts.h"
+#import "Remote.h"
 
 
-#define kPowerID 1
-#define kVolumeUPID 2
-#define kVolumeDownID 3
-#define kChanUPID 4
-#define kChanDownID 5
-#define kInputID 6
+
 
 @implementation BaseRemoteViewController
 
@@ -27,58 +25,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:@"Remote"];
-    self.view.backgroundColor = kBackgroundColor;
+    self.view.backgroundColor = kBackgroundColor;    
+    
     
     api = [[APIHelper alloc] init];
+   
+    int x = kRemoteButtonEdgePadding, y = kRemoteButtonEdgePadding;
+    int width = kRemoteButtonWidth;
+    int height = kRemoteButtonHeight;
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *url = [defaults stringForKey:@"itach_ip"];
+    for (int i = 0; i < kNumButtonTypes; i++) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+       
         
+        [btn setFrame:CGRectMake(x, y, width, height)];
+        [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setTag:i];
+        [btn setTitle:[Remote nameForButtonType:i] forState:UIControlStateNormal];
+        [self.view addSubview:btn];
+        
+        if(i == kPowerOn) {
+            x += kRemoteButtonWidthSpacing;
+        } else if ( i == kPowerOff) {
+            x = kRemoteButtonEdgePadding;
+            y += 80;
+        }
+        else if (i == k3 || i == k6) {
+            y += kRemoteButtonHeightSpacing;
+            x = kRemoteButtonEdgePadding;
+        } else if (i == k9) {
+            x = kRemoteButtonWidthSpacing + kRemoteButtonEdgePadding;
+            y += kRemoteButtonHeightSpacing;
+        } else if (i == k0) {
+            x = kRemoteButtonEdgePadding;
+            y += kRemoteButtonHeightSpacing;
+        }
+        else  {
+            x += kRemoteButtonWidthSpacing;
+        }
+        
+        
+        
+    }
     
-    [api connectToServerUsingCFStream:url portNo:4998];
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(0, 0, 100, 44)];
-    [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTag:kPowerID];
-    [btn setTitle:@"Power" forState:UIControlStateNormal];
-    [self.view addSubview:btn];
-    
-    btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(0, 50, 100, 44)];
-    [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"Vol UP" forState:UIControlStateNormal];
-    [btn setTag:kVolumeUPID];
-    [self.view addSubview:btn];
-    
-    btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(0, 100, 100, 44)];
-    [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"Vol Down" forState:UIControlStateNormal];
-    [btn setTag:kVolumeDownID];
-    [self.view addSubview:btn];
-    
-    btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(0, 150, 100, 44)];
-    [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"Chan up" forState:UIControlStateNormal];
-    [btn setTag:kChanUPID];
-    [self.view addSubview:btn];
-    
-    btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(0, 200, 100, 44)];
-    [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"chan down" forState:UIControlStateNormal];
-    [btn setTag:kChanDownID];
-    [self.view addSubview:btn];
-    
-    btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [btn setFrame:CGRectMake(0, 250, 100, 44)];
-    [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
-    [btn setTitle:@"input" forState:UIControlStateNormal];
-    [btn setTag:kInputID];
-    [self.view addSubview:btn];    
+   
 }
 
 -(void)sendCommand:(id)sender {
@@ -90,6 +81,7 @@
     
     NSString *command;
     
+    /*
     switch (tag) {
         case kPowerID: {
             command = [commands objectForKey:@"power"];            
@@ -118,6 +110,7 @@
         default:
             break;
     }
+     */
     
     command = [NSString stringWithFormat:@"%@\r", command];
     
@@ -132,10 +125,5 @@
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

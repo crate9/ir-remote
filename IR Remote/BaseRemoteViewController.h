@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "APIHelper.h"
+#import "Remote.h"
 
 @interface BaseRemoteViewController : UIViewController
+
 
 @property (strong, nonatomic) APIHelper *api;
 
