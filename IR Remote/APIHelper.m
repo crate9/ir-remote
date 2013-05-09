@@ -79,14 +79,14 @@ CFWriteStreamRef writeStream = NULL;
             len = [(NSInputStream *)stream read:buf maxLength:1024];
             if(len) {
                 [data appendBytes:(const void *)buf length:len];
-                int bytesRead;
+                int bytesRead = 0;
                 bytesRead += len;
             } else {
                 NSLog(@"No data.");
             }
             
             NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(str);
+            NSLog(@"%@", str);
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"From server"
                                                             message:str
                                                            delegate:self
@@ -98,7 +98,7 @@ CFWriteStreamRef writeStream = NULL;
         } break;
     }
     
-   
+    
 }
 
 @end
