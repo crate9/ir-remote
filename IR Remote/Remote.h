@@ -50,4 +50,5 @@ typedef enum inputTypes {
 
 +(NSString *) nameForButtonType:(NSInteger) buttonType;
 +(NSString *) nameForRemoteType:(NSInteger) remoteType;
++(NSString *) getCommandForButton:(NSInteger) buttonID onRemote:(NSInteger)remoteID;
 @end

@@ -134,48 +134,17 @@
 -(void)sendCommand:(id)sender {
     UIButton *btn = (UIButton *)sender;
     int tag = [btn tag];
-    NSLog (@"%d", tag);
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *commands = [defaults dictionaryForKey:@"Panasonic"];
+    NSDictionary *commands = [defaults dictionaryForKey:[Remote nameForRemoteType:remoteID]];
     
-    NSString *command;
+    NSString *command = [commands objectForKey:[Remote nameForButtonType:tag]];
     
-    /*
-     switch (tag) {
-     case kPowerID: {
-     command = [commands objectForKey:@"power"];
-     break;
-     }
-     case kVolumeUPID: {
-     command = [commands objectForKey:@"vol_up"];
-     break;
-     }
-     case kVolumeDownID: {
-     command = [commands objectForKey:@"vol_down"];
-     break;
-     }
-     case kChanUPID: {
-     command = [commands objectForKey:@"chan_up"];
-     break;
-     }
-     case kChanDownID: {
-     command = [commands objectForKey:@"chan_down"];
-     break;
-     }
-     case kInputID: {
-     command = [commands objectForKey:@"input"];
-     break;
-     }
-     default:
-     break;
-     }
-     */
+    command = [NSString stringWithFormat:@"%@\r", command];
+    NSLog (@"%@", command);
     
-    //command = [NSString stringWithFormat:@"%@\r", command];
-    
-    
-    //const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
-    //[api writeToServer:str];
+    const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
+    [api writeToServer:str];
 }
 
 -(void) sendPower {

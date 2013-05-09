@@ -64,9 +64,19 @@
         case kHotKeys:
             return @"HotKeys";
         default:
-            break;
+            return @"UNIMPLEMENTED";
     }
 }
 
++(NSString *)getCommandForButton:(NSInteger)buttonID onRemote:(NSInteger)remoteID {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *commands = [defaults dictionaryForKey:[Remote nameForRemoteType:remoteID]];
+    
+    NSString *command = [commands objectForKey:[Remote nameForButtonType:buttonID]];
+    
+    command = [NSString stringWithFormat:@"%@\r", command];
+    NSLog (@"%@", command);
+    return command;
+}
 
 @end
