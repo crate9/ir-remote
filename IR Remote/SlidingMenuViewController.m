@@ -28,10 +28,14 @@
         tableSectionTitles = [[NSMutableArray alloc] initWithObjects:
                               @"REMOTES", @"OFFLINE MAPS", nil];
         
-        NSArray
+        NSMutableArray *remotes = [[NSMutableArray alloc] initWithCapacity:kNumRemoteTypes];
+        
+        for (int i = 0; i < kNumRemoteTypes; i++) {
+            [remotes addObject:[Remote nameForRemoteType:i]];
+        }
         
         tableData = [[NSMutableArray alloc] initWithObjects:
-                     [[NSArray alloc] initWithObjects:@"TV", @"Direct TV", @"DVD Player", @"Hot Keys", nil],
+                     remotes,
                      [[NSArray alloc] initWithObjects:@"Alaska", @"Mexico", @"Costa Rica", nil],
                      nil];
         
