@@ -39,7 +39,6 @@
 		077FCE7D1720E1F100939DFF /* barButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077FCE7A1720E1F100939DFF /* barButtonBG.png */; };
 		077FCE7E1720E1F100939DFF /* segCtrlSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 077FCE7B1720E1F100939DFF /* segCtrlSelected.png */; };
 		077FCE811720E22300939DFF /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 077FCE801720E22300939DFF /* APIHelper.m */; };
-		077FCE871720EE6400939DFF /* NSStream+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 077FCE861720EE6400939DFF /* NSStream+Helper.m */; };
 		07A7105B17206D940059213F /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105817206D940059213F /* MFSideMenu.m */; };
 		07A7105C17206D940059213F /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105A17206D940059213F /* UINavigationController+MFSideMenu.m */; };
 		07A7105F17206DFB0059213F /* StyleConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105E17206DFB0059213F /* StyleConsts.m */; };
@@ -53,8 +52,6 @@
 		07A7107817206E920059213F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 07A7107017206E920059213F /* README.txt */; };
 		07A7107B17206EB60059213F /* NSUserDefaults+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7107A17206EB60059213F /* NSUserDefaults+Helper.m */; };
 		07A7107F17206F2E0059213F /* BaseRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7107D17206F2E0059213F /* BaseRemoteViewController.m */; };
-		07A7108017206F2E0059213F /* BaseRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A7107E17206F2E0059213F /* BaseRemoteViewController.xib */; };
-		07A71083172070770059213F /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07A71082172070770059213F /* localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,8 +106,6 @@
 		077FCE7B1720E1F100939DFF /* segCtrlSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = segCtrlSelected.png; path = Images/segCtrlSelected.png; sourceTree = "<group>"; };
 		077FCE7F1720E22300939DFF /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };
 		077FCE801720E22300939DFF /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
-		077FCE851720EE6400939DFF /* NSStream+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+Helper.h"; sourceTree = "<group>"; };
-		077FCE861720EE6400939DFF /* NSStream+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+Helper.m"; sourceTree = "<group>"; };
 		07A7105717206D940059213F /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
 		07A7105817206D940059213F /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenu.m; sourceTree = "<group>"; };
 		07A7105917206D940059213F /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
@@ -136,8 +131,6 @@
 		07A7107A17206EB60059213F /* NSUserDefaults+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Helper.m"; sourceTree = "<group>"; };
 		07A7107C17206F2D0059213F /* BaseRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRemoteViewController.h; sourceTree = "<group>"; };
 		07A7107D17206F2E0059213F /* BaseRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRemoteViewController.m; sourceTree = "<group>"; };
-		07A7107E17206F2E0059213F /* BaseRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseRemoteViewController.xib; sourceTree = "<group>"; };
-		07A71082172070770059213F /* localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +167,6 @@
 			children = (
 				077FCE7F1720E22300939DFF /* APIHelper.h */,
 				077FCE801720E22300939DFF /* APIHelper.m */,
-				077FCE851720EE6400939DFF /* NSStream+Helper.h */,
-				077FCE861720EE6400939DFF /* NSStream+Helper.m */,
 				07A7107917206EB60059213F /* NSUserDefaults+Helper.h */,
 				07A7107A17206EB60059213F /* NSUserDefaults+Helper.m */,
 				07024B8A17397D85000DD858 /* Remote.h */,
@@ -224,14 +215,13 @@
 		070B45AF17206B4A00B9D12E /* IR Remote */ = {
 			isa = PBXGroup;
 			children = (
-				07024B8D17398CB3000DD858 /* Helpers */,
 				070B45B817206B4A00B9D12E /* AppDelegate.h */,
 				070B45B917206B4B00B9D12E /* AppDelegate.m */,
 				07024B8717397D14000DD858 /* BaseMapViewController.h */,
 				07024B8817397D14000DD858 /* BaseMapViewController.m */,
 				07A7107C17206F2D0059213F /* BaseRemoteViewController.h */,
 				07A7107D17206F2E0059213F /* BaseRemoteViewController.m */,
-				07A7107E17206F2E0059213F /* BaseRemoteViewController.xib */,
+				07024B8D17398CB3000DD858 /* Helpers */,
 				070B45DF17206BDA00B9D12E /* SlidingMenuViewController.h */,
 				070B45E017206BDA00B9D12E /* SlidingMenuViewController.m */,
 				070B45B017206B4A00B9D12E /* Supporting Files */,
@@ -242,13 +232,13 @@
 		070B45B017206B4A00B9D12E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				079D2357173B124500BE8526 /* Icons */,
 				07A71081172070400059213F /* Images */,
 				070B45DE17206BBA00B9D12E /* Extern Libs */,
 				070B45B217206B4A00B9D12E /* InfoPlist.strings */,
 				070B45B117206B4A00B9D12E /* IR Remote-Info.plist */,
 				070B45B717206B4A00B9D12E /* IR Remote-Prefix.pch */,
 				070B45B517206B4A00B9D12E /* main.m */,
-				07A71082172070770059213F /* localizable.strings */,
 				077FCE661720DF9F00939DFF /* Prefs.plist */,
 				077FCE681720DFCF00939DFF /* Settings.bundle */,
 			);
@@ -282,6 +272,13 @@
 				07A7105617206D940059213F /* MFSideMenu */,
 			);
 			name = "Extern Libs";
+			sourceTree = "<group>";
+		};
+		079D2357173B124500BE8526 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		07A7105617206D940059213F /* MFSideMenu */ = {
@@ -419,8 +416,6 @@
 				070B45BE17206B4B00B9D12E /* Default@2x.png in Resources */,
 				070B45C017206B4B00B9D12E /* Default-568h@2x.png in Resources */,
 				07A7107817206E920059213F /* README.txt in Resources */,
-				07A7108017206F2E0059213F /* BaseRemoteViewController.xib in Resources */,
-				07A71083172070770059213F /* localizable.strings in Resources */,
 				077FCE671720DF9F00939DFF /* Prefs.plist in Resources */,
 				077FCE691720DFCF00939DFF /* Settings.bundle in Resources */,
 				077FCE731720E0AC00939DFF /* list.png in Resources */,
@@ -480,7 +475,6 @@
 				07A7107B17206EB60059213F /* NSUserDefaults+Helper.m in Sources */,
 				07A7107F17206F2E0059213F /* BaseRemoteViewController.m in Sources */,
 				077FCE811720E22300939DFF /* APIHelper.m in Sources */,
-				077FCE871720EE6400939DFF /* NSStream+Helper.m in Sources */,
 				07024B8917397D14000DD858 /* BaseMapViewController.m in Sources */,
 				07024B8C17397D85000DD858 /* Remote.m in Sources */,
 			);
