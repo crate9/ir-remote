@@ -27,6 +27,9 @@
         
         tableSectionTitles = [[NSMutableArray alloc] initWithObjects:
                               @"REMOTES", @"OFFLINE MAPS", nil];
+        
+        NSArray
+        
         tableData = [[NSMutableArray alloc] initWithObjects:
                      [[NSArray alloc] initWithObjects:@"TV", @"Direct TV", @"DVD Player", @"Hot Keys", nil],
                      [[NSArray alloc] initWithObjects:@"Alaska", @"Mexico", @"Costa Rica", nil],
@@ -137,23 +140,8 @@
     
     switch(indexPath.section) {
         case 0:
-            controller = [[BaseRemoteViewController alloc] initWithNibName:@"BaseRemoteViewController" bundle:nil];
-            switch (indexPath.row) {
-                case 0:
-                    [controller setTitle:@"TV"];
-                    break;
-                case 1:
-                    [controller setTitle:@"Direct TV"];
-                    break;
-                case 2:
-                    [controller setTitle:@"DVD Player"];
-                    break;
-                case 3:
-                    [controller setTitle:@"Hot Keys"];
-                    break;
-                default:
-                    [controller setTitle:@"UNIMPLEMENTED"];
-            }
+            controller = [[BaseRemoteViewController alloc] init];
+            [(BaseRemoteViewController *)controller setRemoteID:indexPath.row];
             break;
         case 1:
             controller = [[BaseMapViewController alloc] init];

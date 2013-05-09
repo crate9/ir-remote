@@ -18,13 +18,11 @@
         case kPowerOff:
             return @"Power Off";
         case kVolumeUp:
-            return @"Volume Up";
-        case kVolumeDown:
-            return @"Volume Down";
         case kChannelUp:
-            return @"Channel Up";
+            return @"+";
+        case kVolumeDown:
         case kChannelDown:
-            return @"Channel Down";
+            return @"-";
         case k1:
             return @"1";
         case k2:
@@ -45,14 +43,29 @@
             return @"9";
         case k0:
             return @"0";
-        case kInputHDMI:
-            return @"HDMI";
-        case kInputDVD:
-            return @"DVD";
+        case kInput:
+            return @"Input";
+        case kMute:
+            return @"Mute";
         default:
             return @"UNIMPLEMENTED";
     }
     
+}
+
++(NSString *)nameForRemoteType:(NSInteger)remoteType {
+    switch (remoteType) {
+        case kTV:
+            return @"TV";
+        case kDirectTV:
+            return @"Direct TV";
+        case kDVDPlayer:
+            return @"DVD";
+        case kHotKeys:
+            return @"HotKeys";
+        default:
+            break;
+    }
 }
 
 

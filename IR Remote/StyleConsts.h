@@ -45,13 +45,21 @@
 #define kTableViewBorderWidth 2
 #define kTableViewBorderColor [UIColor blackColor].CGColor
 
-//Remote
-#define kRemoteButtonHeight 44
-#define kRemoteButtonWidth 100
+//Remote General
+
 #define kRemoteButtonHeightSpacing 64
-#define kRemoteButtonWidthSpacing 120
 #define kRemoteButtonEdgePadding 20
 
+//Reemote iPhone
+#define kRemoteButtonWidthSpacingIPhone 100
+#define kRemoteButtonWidthChannelIPhone 70
+#define kRemoteButtonHeightIPhone 44
+
+//Remote iPad
+#define kRemoteButtonWidthSpacingIPad 120
+#define kRemoteButtonWidthChannelIPad 100
+#define kRemoteButtonHeightIPad 88
+#define kRemoteButtonWidthIPad 200
 
 @interface StyleConsts : NSObject
 

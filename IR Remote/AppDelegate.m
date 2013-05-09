@@ -30,7 +30,8 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
 -(BaseRemoteViewController *) baseRemoteViewController {
     
-    BaseRemoteViewController *viewController = [[BaseRemoteViewController alloc] initWithNibName:@"BaseRemoteViewController" bundle:nil];
+    BaseRemoteViewController *viewController = [[BaseRemoteViewController alloc] init];
+    [viewController setRemoteID:kTV];
     return viewController;
     
 }

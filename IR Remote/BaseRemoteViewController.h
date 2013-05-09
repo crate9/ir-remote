@@ -14,6 +14,7 @@
 
 
 @property (strong, nonatomic) APIHelper *api;
+@property NSInteger remoteID;
 
 -(IBAction)sendCommand:(id)sender;
 

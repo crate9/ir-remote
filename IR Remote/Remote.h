@@ -21,12 +21,12 @@ typedef enum buttonTypes {
     k7,
     k8,
     k9,
+    kInput,
     k0,
-    kInputHDMI,
-    kInputDVD,
+    kMute,
     kVolumeUp,
-    kVolumeDown,
     kChannelUp,
+    kVolumeDown,
     kChannelDown,
     kNumButtonTypes
 } Buttons;
@@ -35,8 +35,8 @@ typedef enum remoteTypes {
     kTV,
     kDirectTV,
     kDVDPlayer,
-    kHotKeys
-    
+    kHotKeys,
+    kNumRemoteTypes
 } Remotes;
 
 typedef enum inputTypes {
@@ -49,5 +49,5 @@ typedef enum inputTypes {
 
 
 +(NSString *) nameForButtonType:(NSInteger) buttonType;
-
++(NSString *) nameForRemoteType:(NSInteger) remoteType;
 @end

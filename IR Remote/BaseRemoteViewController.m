@@ -20,23 +20,33 @@
 
 @implementation BaseRemoteViewController
 
-@synthesize api;
+@synthesize api, remoteID;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = kBackgroundColor;    
+    self.view.backgroundColor = kBackgroundColor;
+    [self setTitle:[Remote nameForRemoteType:remoteID]];
+    
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Power" style:UIBarButtonItemStyleBordered target:self action:@selector(popScreen)];
+    self.navigationItem.rightBarButtonItem = backButton;
     
     
     api = [[APIHelper alloc] init];
-   
+    
     int x = kRemoteButtonEdgePadding, y = kRemoteButtonEdgePadding;
-    int width = kRemoteButtonWidth;
-    int height = kRemoteButtonHeight;
+    int width = kRemoteButtonWidthChannelIPhone;
+    int height = kRemoteButtonHeightIPhone;
     
     for (int i = 0; i < kNumButtonTypes; i++) {
+        
+        //Moved power btns to top, so skip those for layout
+        if (i == kPowerOn || i == kPowerOff)
+            continue;
+        
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-       
+        
         
         [btn setFrame:CGRectMake(x, y, width, height)];
         [btn addTarget:self action:@selector(sendCommand:) forControlEvents:UIControlEventTouchUpInside];
@@ -44,79 +54,128 @@
         [btn setTitle:[Remote nameForButtonType:i] forState:UIControlStateNormal];
         [self.view addSubview:btn];
         
-        if(i == kPowerOn) {
-            x += kRemoteButtonWidthSpacing;
-        } else if ( i == kPowerOff) {
-            x = kRemoteButtonEdgePadding;
-            y += 80;
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            
+            if (i == k3 || i == k6) {
+                y += kRemoteButtonHeightSpacing;
+                x = kRemoteButtonEdgePadding;
+            } else if (i == k9) {
+                x = kRemoteButtonEdgePadding;
+                y += kRemoteButtonHeightSpacing;
+            } else if (i == kMute) {
+                x = kRemoteButtonEdgePadding;
+                y += kRemoteButtonHeightSpacing;
+                
+                //Add volume label
+                UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x + 5, y, 100, 20)];
+                [label setText:@"Volume"];
+                [label setBackgroundColor:[UIColor clearColor]];
+                [label setTextColor:kBaseUILabelColor];
+                [self.view addSubview:label];
+                
+                //Add channel label
+                x += kRemoteButtonWidthSpacingIPhone * 2;
+
+                label = [[UILabel alloc] initWithFrame:CGRectMake(x + 5, y, 100, 20)];
+                [label setText:@"Channel"];
+                [label setBackgroundColor:[UIColor clearColor]];
+                [label setTextColor:kBaseUILabelColor];
+                [self.view addSubview:label];
+                
+                //Reset for next row
+                x = kRemoteButtonEdgePadding;
+                y += 30;
+
+            } 
+            else if (i == kVolumeUp) {
+                x += kRemoteButtonWidthSpacingIPhone * 2;
+                        
+            } else if (i == kChannelUp) {
+                x = kRemoteButtonEdgePadding;
+                y+= kRemoteButtonHeightSpacing - 5;
+                
+            } else if (i == kVolumeDown) {
+                x += kRemoteButtonWidthSpacingIPhone * 2;
+            }
+            else {
+                x += kRemoteButtonWidthSpacingIPhone;
+            }
+            
+        } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            if(i == kPowerOn) {
+                x += kRemoteButtonWidthSpacingIPad;
+            } else if ( i == kPowerOff) {
+                x = kRemoteButtonEdgePadding;
+                y += 80;
+                
+                width = kRemoteButtonWidthChannelIPhone;
+                
+                
+            }
+            else if (i == k3 || i == k6) {
+                y += kRemoteButtonHeightSpacing;
+                x = kRemoteButtonEdgePadding;
+            } else if (i == k9) {
+                
+                x = kRemoteButtonWidthSpacingIPad + kRemoteButtonEdgePadding;
+                y += kRemoteButtonHeightSpacing;
+            } else if (i == k0) {
+                x = kRemoteButtonEdgePadding;
+                y += kRemoteButtonHeightSpacing;
+            }
+            else  {
+                x += kRemoteButtonWidthSpacingIPhone;
+                
+            }
         }
-        else if (i == k3 || i == k6) {
-            y += kRemoteButtonHeightSpacing;
-            x = kRemoteButtonEdgePadding;
-        } else if (i == k9) {
-            x = kRemoteButtonWidthSpacing + kRemoteButtonEdgePadding;
-            y += kRemoteButtonHeightSpacing;
-        } else if (i == k0) {
-            x = kRemoteButtonEdgePadding;
-            y += kRemoteButtonHeightSpacing;
-        }
-        else  {
-            x += kRemoteButtonWidthSpacing;
-        }
-        
-        
-        
     }
-    
-    
-   
 }
 
 -(void)sendCommand:(id)sender {
     UIButton *btn = (UIButton *)sender;
     int tag = [btn tag];
-    
+    NSLog (@"%d", tag);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *commands = [defaults dictionaryForKey:@"Panasonic"];
     
     NSString *command;
     
     /*
-    switch (tag) {
-        case kPowerID: {
-            command = [commands objectForKey:@"power"];            
-            break;
-        }
-        case kVolumeUPID: {
-            command = [commands objectForKey:@"vol_up"];
-            break;
-        }
-        case kVolumeDownID: {
-            command = [commands objectForKey:@"vol_down"];
-            break;
-        }
-        case kChanUPID: {
-            command = [commands objectForKey:@"chan_up"];
-            break;
-        }
-        case kChanDownID: {
-            command = [commands objectForKey:@"chan_down"];
-            break;
-        }
-        case kInputID: {
-            command = [commands objectForKey:@"input"];
-            break;
-        }
-        default:
-            break;
-    }
+     switch (tag) {
+     case kPowerID: {
+     command = [commands objectForKey:@"power"];
+     break;
+     }
+     case kVolumeUPID: {
+     command = [commands objectForKey:@"vol_up"];
+     break;
+     }
+     case kVolumeDownID: {
+     command = [commands objectForKey:@"vol_down"];
+     break;
+     }
+     case kChanUPID: {
+     command = [commands objectForKey:@"chan_up"];
+     break;
+     }
+     case kChanDownID: {
+     command = [commands objectForKey:@"chan_down"];
+     break;
+     }
+     case kInputID: {
+     command = [commands objectForKey:@"input"];
+     break;
+     }
+     default:
+     break;
+     }
      */
     
-    command = [NSString stringWithFormat:@"%@\r", command];
+    //command = [NSString stringWithFormat:@"%@\r", command];
     
     
-    const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
-    [api writeToServer:str];
+    //const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
+    //[api writeToServer:str];
 }
 
 -(void) sendPower {
