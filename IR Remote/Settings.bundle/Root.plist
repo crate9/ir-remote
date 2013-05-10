@@ -16,7 +16,7 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 			<key>DefaultValue</key>
-			<string>192.168.1.34</string>
+			<string>192.168.0.100</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>
