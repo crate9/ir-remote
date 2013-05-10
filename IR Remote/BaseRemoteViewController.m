@@ -29,18 +29,21 @@
     [self setTitle:[Remote nameForRemoteType:remoteID]];
     
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Power" style:UIBarButtonItemStyleBordered target:self action:@selector(sendCommand:)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"TV Power" style:UIBarButtonItemStyleBordered target:self action:@selector(sendCommand:)];
     [backButton setTag:kPowerOn];
     self.navigationItem.rightBarButtonItem = backButton;
     
     
     api = [[APIHelper alloc] init];
     
+    if(remoteID == kDirectTV || remoteID == kDVDPlayer)
+        return;
+    
     int x = kRemoteButtonEdgePadding, y = kRemoteButtonEdgePadding;
     int width = kRemoteButtonWidthChannelIPhone;
     int height = kRemoteButtonHeightIPhone;
     
-    for (int i = 0; i < kNumButtonTypes; i++) {
+    for (int i = 0; i < kNumDefaultButtonTypes; i++) {
         
         //Moved power btns to top, so skip those for layout
         if (i == kPowerOn || i == kPowerOff)

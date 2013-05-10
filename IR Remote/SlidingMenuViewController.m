@@ -144,7 +144,17 @@
     
     switch(indexPath.section) {
         case 0:
-            controller = [[BaseRemoteViewController alloc] init];
+            switch (indexPath.row) {
+                case kDirectTV:
+                case kDVDPlayer:
+                    controller = [[BaseRemoteViewController alloc] initWithNibName:@"DirectTVRemoteViewController" bundle:nil];
+                    break;
+                    
+                default:
+                    controller = [[BaseRemoteViewController alloc] init];
+                    break;
+            }
+            
             [(BaseRemoteViewController *)controller setRemoteID:indexPath.row];
             break;
         case 1:

@@ -98,7 +98,7 @@ CFWriteStreamRef writeStream = NULL;
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
-            [alert show];
+            //[alert show];
             
             data = nil;
         } break;

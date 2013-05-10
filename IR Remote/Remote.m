@@ -92,6 +92,42 @@
         case kChannelDown:
             [results addObject:[commands objectForKey:@"chanDown"]];
             break;
+        case kPlay:
+            [results addObject:[commands objectForKey:@"play"]];
+            break;
+        case kPause:
+            [results addObject:[commands objectForKey:@"pause"]];
+            break;
+        case kRewind:
+            [results addObject:[commands objectForKey:@"rewind"]];
+            break;
+        case kFastForward:
+            [results addObject:[commands objectForKey:@"fastFoward"]];
+            break;
+        case kStop:
+            [results addObject:[commands objectForKey:@"stop"]];
+            break;
+        case kUp:
+            [results addObject:[commands objectForKey:@"up"]];
+            break;
+        case kDown:
+            [results addObject:[commands objectForKey:@"down"]];
+            break;
+        case kLeft:
+            [results addObject:[commands objectForKey:@"left"]];
+            break;
+        case kRight:
+            [results addObject:[commands objectForKey:@"right"]];
+            break;
+        case kSelect:
+            [results addObject:[commands objectForKey:@"select"]];
+            break;
+        case kGuide:
+            [results addObject:[commands objectForKey:@"guide"]];
+            break;
+        case kInfo:
+            [results addObject:[commands objectForKey:@"chanDown"]];
+            break;
         default:
             [results addObject:[commands objectForKey:[[Remote nameForButtonType:buttonID] lowercaseString]]];
             break;

@@ -10,6 +10,7 @@
 
 
 typedef enum buttonTypes {
+    //Basic buttons on all remotes
     kPowerOn,
     kPowerOff,
     k1,
@@ -28,20 +29,23 @@ typedef enum buttonTypes {
     kChannelUp,
     kVolumeDown,
     kChannelDown,
-    kNumButtonTypes
-} Buttons;
-
-typedef enum advancedButtonTypes {
+    kNumDefaultButtonTypes,
+    //Advance buttons for DVD player and direct tv
     kPlay,
     kPause,
     kRewind,
     kFastForward,
-    kEnter,
-    kMenu,
+    kStop,
+    kUp,
+    kDown,
+    kLeft,
+    kRight,
+    kSelect,
     kGuide,
+    kInfo,
     kNumAdvancedButtons
-    
-} AdvancedButtons;
+} Buttons;
+
 
 typedef enum remoteTypes {
     kTV,

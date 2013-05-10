@@ -39,6 +39,7 @@
 		077FCE7D1720E1F100939DFF /* barButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077FCE7A1720E1F100939DFF /* barButtonBG.png */; };
 		077FCE7E1720E1F100939DFF /* segCtrlSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 077FCE7B1720E1F100939DFF /* segCtrlSelected.png */; };
 		077FCE811720E22300939DFF /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 077FCE801720E22300939DFF /* APIHelper.m */; };
+		07A2E2B0173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A2E2AF173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib */; };
 		07A7105B17206D940059213F /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105817206D940059213F /* MFSideMenu.m */; };
 		07A7105C17206D940059213F /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105A17206D940059213F /* UINavigationController+MFSideMenu.m */; };
 		07A7105F17206DFB0059213F /* StyleConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A7105E17206DFB0059213F /* StyleConsts.m */; };
@@ -106,6 +107,7 @@
 		077FCE7B1720E1F100939DFF /* segCtrlSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = segCtrlSelected.png; path = Images/segCtrlSelected.png; sourceTree = "<group>"; };
 		077FCE7F1720E22300939DFF /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };
 		077FCE801720E22300939DFF /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
+		07A2E2AF173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "DirectTVRemoteViewController~iphone.xib"; sourceTree = "<group>"; };
 		07A7105717206D940059213F /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
 		07A7105817206D940059213F /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenu.m; sourceTree = "<group>"; };
 		07A7105917206D940059213F /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				07024B8817397D14000DD858 /* BaseMapViewController.m */,
 				07A7107C17206F2D0059213F /* BaseRemoteViewController.h */,
 				07A7107D17206F2E0059213F /* BaseRemoteViewController.m */,
+				07A2E2AF173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib */,
 				07024B8D17398CB3000DD858 /* Helpers */,
 				070B45DF17206BDA00B9D12E /* SlidingMenuViewController.h */,
 				070B45E017206BDA00B9D12E /* SlidingMenuViewController.m */,
@@ -425,6 +428,7 @@
 				077FCE7D1720E1F100939DFF /* barButtonBG.png in Resources */,
 				077FCE7E1720E1F100939DFF /* segCtrlSelected.png in Resources */,
 				07024B86173971DC000DD858 /* MapBox.bundle in Resources */,
+				07A2E2B0173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
