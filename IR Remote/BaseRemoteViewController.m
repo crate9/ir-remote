@@ -16,7 +16,9 @@
 #import "Remote.h"
 
 
-
+//TV power is still power for remote
+//Remove dvd player channel up down buttons and info, rename guide to menu
+//On changing input, change to that input's remote page
 
 @implementation BaseRemoteViewController
 

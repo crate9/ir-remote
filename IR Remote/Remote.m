@@ -102,7 +102,7 @@
             [results addObject:[commands objectForKey:@"rewind"]];
             break;
         case kFastForward:
-            [results addObject:[commands objectForKey:@"fastFoward"]];
+            [results addObject:[commands objectForKey:@"fastForward"]];
             break;
         case kStop:
             [results addObject:[commands objectForKey:@"stop"]];
