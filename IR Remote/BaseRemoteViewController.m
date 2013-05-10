@@ -29,7 +29,8 @@
     [self setTitle:[Remote nameForRemoteType:remoteID]];
     
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Power" style:UIBarButtonItemStyleBordered target:self action:@selector(popScreen)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Power" style:UIBarButtonItemStyleBordered target:self action:@selector(sendCommand:)];
+    [backButton setTag:kPowerOn];
     self.navigationItem.rightBarButtonItem = backButton;
     
     
@@ -136,22 +137,47 @@
     int tag = [btn tag];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *commands = [defaults dictionaryForKey:[Remote nameForRemoteType:remoteID]];
     
-    NSString *command = [commands objectForKey:[Remote nameForButtonType:tag]];
+    if(tag == kInput) {
+        
+        NSArray *inputTypes = [[defaults dictionaryForKey:@"inputTypes"] allKeys];
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Choose Input:" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+        
+        int numInputTypes = [inputTypes count];
+        for (int i = 0; i < numInputTypes; i++) {
+            [actionSheet addButtonWithTitle:[inputTypes objectAtIndex:i]];
+        }
+        
+        [actionSheet addButtonWithTitle:@"Cancel"];
+        [actionSheet setCancelButtonIndex:numInputTypes];
+        
+
+        [actionSheet showInView:self.view];
+    } else {
+        NSArray *commands = [Remote getCommandsForButtonID:tag fromRemoteID:remoteID];
+        float time = 0;
+        for (NSString *command in commands) {
+            [api performSelector:@selector(sendCommandToServer:) withObject:command afterDelay:time];
+            time += 0.5;
+        }
+    }
     
-    command = [NSString stringWithFormat:@"%@\r", command];
-    NSLog (@"%@", command);
     
-    const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
-    [api writeToServer:str];
 }
 
--(void) sendPower {
-    const uint8_t *str = (uint8_t *) [@"sendir,3:1,1,40064,1,5,96,24,48,24,24,24,48,24,24,24,48,24,24,24,24,24,48,24,24,24,24,24,24,24,24,1029,96,24,48,24,24,24,48,24,24,24,48,24,24,24,24,24,48,24,24,24,24,24,24,24,24,2980,9,24,24,24,48,24,24,24,48,24,24,24,24,24,48,24,24,24,24,24,24,24,24,4006\x0D" cStringUsingEncoding:NSASCIIStringEncoding];
-    [api writeToServer:str];
-}
 
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    
+    if ( buttonIndex != [actionSheet cancelButtonIndex]) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSDictionary *commands = [defaults dictionaryForKey:@"inputTypes"];
+        NSString *command = [commands objectForKey:[[commands allKeys] objectAtIndex:buttonIndex]];
+        [api sendCommandToServer:command];
+    }
+}
 
 
 @end

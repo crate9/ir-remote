@@ -68,15 +68,36 @@
     }
 }
 
-+(NSString *)getCommandForButton:(NSInteger)buttonID onRemote:(NSInteger)remoteID {
++(NSArray *)getCommandsForButtonID:(NSInteger)buttonID fromRemoteID:(NSInteger)remoteID {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *commands = [defaults dictionaryForKey:[Remote nameForRemoteType:remoteID]];
     
-    NSString *command = [commands objectForKey:[Remote nameForButtonType:buttonID]];
+    NSMutableArray *results = [[NSMutableArray alloc] init];
     
-    command = [NSString stringWithFormat:@"%@\r", command];
-    NSLog (@"%@", command);
-    return command;
+    switch (buttonID) {
+        case kPowerOn:
+        case kPowerOff:
+            [results addObject:[commands objectForKey:@"powerOn"]];
+            [results addObject:[commands objectForKey:@"powerOff"]];
+            break;
+        case kVolumeUp:
+            [results addObject:[commands objectForKey:@"volUp"]];
+            break;
+        case kVolumeDown:
+            [results addObject:[commands objectForKey:@"volDown"]];
+            break;
+        case kChannelUp:
+            [results addObject:[commands objectForKey:@"chanUp"]];
+            break;
+        case kChannelDown:
+            [results addObject:[commands objectForKey:@"chanDown"]];
+            break;
+        default:
+            [results addObject:[commands objectForKey:[[Remote nameForButtonType:buttonID] lowercaseString]]];
+            break;
+    }
+    
+    return results;
 }
 
 @end

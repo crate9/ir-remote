@@ -12,7 +12,7 @@
 
 
 -(void) connectToServerUsingCFStream:(NSString *) urlStr portNo: (uint) portNo;
--(void) writeToServer:(const uint8_t *) buf;
+-(void) sendCommandToServer:(NSString *) command;
 
 
 @end

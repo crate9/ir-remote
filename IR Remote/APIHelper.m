@@ -62,8 +62,14 @@ CFWriteStreamRef writeStream = NULL;
     }
 }
 
--(void) writeToServer:(const uint8_t *) buf {
-    [oStream write:buf maxLength:strlen((char*)buf)];
+-(void) sendCommandToServer:(NSString *) command {
+    
+    if(![command hasSuffix:@"\r"])    
+        command = [NSString stringWithFormat:@"%@\r", command];
+    
+    
+    const uint8_t *str = (uint8_t *)[command cStringUsingEncoding:NSASCIIStringEncoding];
+    [oStream write:str maxLength:strlen((char*)str)];
 }
 
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {

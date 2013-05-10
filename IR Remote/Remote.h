@@ -31,6 +31,18 @@ typedef enum buttonTypes {
     kNumButtonTypes
 } Buttons;
 
+typedef enum advancedButtonTypes {
+    kPlay,
+    kPause,
+    kRewind,
+    kFastForward,
+    kEnter,
+    kMenu,
+    kGuide,
+    kNumAdvancedButtons
+    
+} AdvancedButtons;
+
 typedef enum remoteTypes {
     kTV,
     kDirectTV,
@@ -50,5 +62,5 @@ typedef enum inputTypes {
 
 +(NSString *) nameForButtonType:(NSInteger) buttonType;
 +(NSString *) nameForRemoteType:(NSInteger) remoteType;
-+(NSString *) getCommandForButton:(NSInteger) buttonID onRemote:(NSInteger)remoteID;
++(NSArray *) getCommandsForButtonID:(NSInteger) buttonID fromRemoteID:(NSInteger)remoteID;
 @end

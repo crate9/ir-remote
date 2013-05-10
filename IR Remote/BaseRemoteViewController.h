@@ -10,12 +10,11 @@
 #import "APIHelper.h"
 #import "Remote.h"
 
-@interface BaseRemoteViewController : UIViewController
+@interface BaseRemoteViewController : UIViewController < UIActionSheetDelegate>
 
 
 @property (strong, nonatomic) APIHelper *api;
 @property NSInteger remoteID;
 
 -(IBAction)sendCommand:(id)sender;
-
 @end
