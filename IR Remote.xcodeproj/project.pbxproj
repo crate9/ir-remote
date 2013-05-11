@@ -11,9 +11,6 @@
 		07024B7C17397160000DD858 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07024B7B17397160000DD858 /* QuartzCore.framework */; };
 		07024B7E1739716A000DD858 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07024B7D1739716A000DD858 /* libz.dylib */; };
 		07024B8017397171000DD858 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07024B7F17397171000DD858 /* libsqlite3.dylib */; };
-		07024B821739718A000DD858 /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07024B811739718A000DD858 /* MapBox.framework */; };
-		07024B86173971DC000DD858 /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07024B85173971DC000DD858 /* MapBox.bundle */; };
-		07024B8917397D14000DD858 /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07024B8817397D14000DD858 /* BaseMapViewController.m */; };
 		07024B8C17397D85000DD858 /* Remote.m in Sources */ = {isa = PBXBuildFile; fileRef = 07024B8B17397D85000DD858 /* Remote.m */; };
 		070B45AA17206B4A00B9D12E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45A917206B4A00B9D12E /* UIKit.framework */; };
 		070B45AC17206B4A00B9D12E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B45AB17206B4A00B9D12E /* Foundation.framework */; };
@@ -70,10 +67,6 @@
 		07024B7B17397160000DD858 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07024B7D1739716A000DD858 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		07024B7F17397171000DD858 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		07024B811739718A000DD858 /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
-		07024B85173971DC000DD858 /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MapBox.bundle; path = MapBox.framework/Versions/A/Resources/MapBox.bundle; sourceTree = SOURCE_ROOT; };
-		07024B8717397D14000DD858 /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
-		07024B8817397D14000DD858 /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
 		07024B8A17397D85000DD858 /* Remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Remote.h; sourceTree = "<group>"; };
 		07024B8B17397D85000DD858 /* Remote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Remote.m; sourceTree = "<group>"; };
 		070B45A617206B4A00B9D12E /* IR Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IR Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +140,6 @@
 				070B45AA17206B4A00B9D12E /* UIKit.framework in Frameworks */,
 				070B45AC17206B4A00B9D12E /* Foundation.framework in Frameworks */,
 				070B45AE17206B4A00B9D12E /* CoreGraphics.framework in Frameworks */,
-				07024B821739718A000DD858 /* MapBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +193,6 @@
 		070B45A817206B4A00B9D12E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07024B811739718A000DD858 /* MapBox.framework */,
 				07024B7F17397171000DD858 /* libsqlite3.dylib */,
 				07024B7D1739716A000DD858 /* libz.dylib */,
 				07024B7B17397160000DD858 /* QuartzCore.framework */,
@@ -219,8 +210,6 @@
 			children = (
 				070B45B817206B4A00B9D12E /* AppDelegate.h */,
 				070B45B917206B4B00B9D12E /* AppDelegate.m */,
-				07024B8717397D14000DD858 /* BaseMapViewController.h */,
-				07024B8817397D14000DD858 /* BaseMapViewController.m */,
 				07A7107C17206F2D0059213F /* BaseRemoteViewController.h */,
 				07A7107D17206F2E0059213F /* BaseRemoteViewController.m */,
 				07A2E2AF173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib */,
@@ -270,7 +259,6 @@
 		070B45DE17206BBA00B9D12E /* Extern Libs */ = {
 			isa = PBXGroup;
 			children = (
-				07024B85173971DC000DD858 /* MapBox.bundle */,
 				07A7106017206E920059213F /* Lumberjack */,
 				07A7105617206D940059213F /* MFSideMenu */,
 			);
@@ -427,7 +415,6 @@
 				077FCE7C1720E1F100939DFF /* barButtonBG_sel.png in Resources */,
 				077FCE7D1720E1F100939DFF /* barButtonBG.png in Resources */,
 				077FCE7E1720E1F100939DFF /* segCtrlSelected.png in Resources */,
-				07024B86173971DC000DD858 /* MapBox.bundle in Resources */,
 				07A2E2B0173C9E5700F50010 /* DirectTVRemoteViewController~iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,7 +466,6 @@
 				07A7107B17206EB60059213F /* NSUserDefaults+Helper.m in Sources */,
 				07A7107F17206F2E0059213F /* BaseRemoteViewController.m in Sources */,
 				077FCE811720E22300939DFF /* APIHelper.m in Sources */,
-				07024B8917397D14000DD858 /* BaseMapViewController.m in Sources */,
 				07024B8C17397D85000DD858 /* Remote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +575,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IR Remote/IR Remote-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "IR Remote/IR Remote-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/IR Remote/extern/mapbox-ios-sdk/MapView/Map/GRMustache/lib\"",
+					"\"$(SRCROOT)/IR Remote/extern/mapbox-ios-sdk/Proj4\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -605,7 +597,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IR Remote/IR Remote-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "IR Remote/IR Remote-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/IR Remote/extern/mapbox-ios-sdk/MapView/Map/GRMustache/lib\"",
+					"\"$(SRCROOT)/IR Remote/extern/mapbox-ios-sdk/Proj4\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

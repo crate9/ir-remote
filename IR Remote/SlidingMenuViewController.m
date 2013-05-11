@@ -9,7 +9,6 @@
 #import "SlidingMenuViewController.h"
 
 #import "AppDelegate.h"
-#import "BaseMapViewController.h"
 #import "BaseRemoteViewController.h"
 #import "StyleConsts.h"
 
@@ -26,7 +25,7 @@
         
         
         tableSectionTitles = [[NSMutableArray alloc] initWithObjects:
-                              @"REMOTES", @"OFFLINE MAPS", nil];
+                              @"REMOTES", nil];
         
         NSMutableArray *remotes = [[NSMutableArray alloc] initWithCapacity:kNumRemoteTypes];
         
@@ -36,7 +35,6 @@
         
         tableData = [[NSMutableArray alloc] initWithObjects:
                      remotes,
-                     [[NSArray alloc] initWithObjects:@"Alaska", @"Mexico", @"Costa Rica", nil],
                      nil];
         
     }
@@ -156,9 +154,6 @@
             }
             
             [(BaseRemoteViewController *)controller setRemoteID:indexPath.row];
-            break;
-        case 1:
-            controller = [[BaseMapViewController alloc] init];
             break;
         default:
             break;

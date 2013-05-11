@@ -64,7 +64,7 @@ CFWriteStreamRef writeStream = NULL;
 
 -(void) sendCommandToServer:(NSString *) command {
     
-    if(![command hasSuffix:@"\r"])    
+    if(![command hasSuffix:@"\r"])
         command = [NSString stringWithFormat:@"%@\r", command];
     
     
@@ -102,6 +102,8 @@ CFWriteStreamRef writeStream = NULL;
             
             data = nil;
         } break;
+        default:
+            break;
     }
     
     
